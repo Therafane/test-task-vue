@@ -1,28 +1,47 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="container">
+    <header class="header">
+      <div class="header__cover">
+        <h1 class="header__name">Solutions for people <br />like you</h1>
+      </div>
+    </header>
+    <main class="main">
+      <div class="wrapper">
+        <XCard category="| marketing">
+          <div style="background-color: #d3d8e4; height: 100%"></div>
+        </XCard>
+        <XCard>
+          <img src="./assets/img2.jpg" alt="" />
+        </XCard>
+        <XCard category="| marketing" color="dark">
+          <div style="background-color: #ff779a; height: 100%"></div>
+        </XCard>
+        <XCard category="| marketing" color="dark">
+          <div style="background-color: #00b6dd; height: 100%"></div>
+        </XCard>
+        <XCard category="| marketing">
+          <img src="./assets/img1.jpg" alt="" />
+        </XCard>
+        <XCard color="dark">
+          <div style="background-color: #d3d8e4; height: 100%"></div>
+        </XCard>
+      </div>
+    </main>
+    <footer></footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import XCard from "./components/XCard.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    XCard,
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./style/style.scss";
 </style>
